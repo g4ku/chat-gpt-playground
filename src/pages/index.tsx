@@ -82,6 +82,7 @@ export default function Home() {
       <Head>
         <title>ChatGPT Playground</title>
         <meta name="description" content="call ChatGPT(gpt-3.5-turbo) " />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <MainContainer
