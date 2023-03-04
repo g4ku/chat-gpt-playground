@@ -8,7 +8,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
-import { BsSendFill } from "react-icons/bs";
+import { BsSendFill, BsArrowsCollapse, BsArrowsExpand } from "react-icons/bs";
 
 type ChatTextProps = {
   onSubmit: (text: string) => void;
@@ -44,7 +44,11 @@ const ChatText: React.FC<ChatTextProps> = (props) => {
       <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
         <Flex gap="5px">
           <Button colorScheme="green" variant="ghost" onClick={switchMultiline}>
-            ↕️
+            {multiline ? (
+              <BsArrowsCollapse size={24} />
+            ) : (
+              <BsArrowsExpand size={24} />
+            )}
           </Button>
           <InputGroup>
             {multiline ? (
