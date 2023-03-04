@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useState, useRef, useEffect } from "react";
 import { useMutation } from "react-query";
 import { Button } from "@chakra-ui/react";
+import { FaTrash } from "react-icons/fa";
 import MainContainer from "@/templates/MainContainer";
 import ChatView, { ChatItem } from "@/components/ChatView";
 import * as styles from "../styles/Home";
@@ -86,7 +87,7 @@ export default function Home() {
       <MainContainer
         rightContent={
           <Button size="xs" colorScheme="red" onClick={clearItems}>
-            🗑️
+            <FaTrash />
           </Button>
         }
       >

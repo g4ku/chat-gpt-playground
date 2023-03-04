@@ -8,6 +8,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
+import { BsSendFill } from "react-icons/bs";
 
 type ChatTextProps = {
   onSubmit: (text: string) => void;
@@ -53,7 +54,7 @@ const ChatText: React.FC<ChatTextProps> = (props) => {
             )}
           </InputGroup>
           <Button type="submit" colorScheme="green" isLoading={props.fetching}>
-            送信
+            <BsSendFill size={20} />
           </Button>
         </Flex>
       </form>
