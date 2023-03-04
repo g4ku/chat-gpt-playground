@@ -12,6 +12,8 @@ const theme = extendTheme({
       },
     },
   },
+  initialColorMode: "dark",
+  useSystemColorMode: false,
 });
 
 const queryClient = new QueryClient();
