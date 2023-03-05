@@ -1,12 +1,13 @@
 import React from "react";
-import { Box, Center, Container, Spinner, Tag } from "@chakra-ui/react";
+import { Box, Center, Container, Flex, Spinner, Tag } from "@chakra-ui/react";
 import * as styles from "./style";
 
 export type ChatItem = {
   role: "assistant" | "user";
   content: string;
   error?: boolean;
-  token?: number;
+  promptTokens?: number;
+  completionTokens?: number;
 };
 
 type ChatViewProps = {
@@ -58,10 +59,11 @@ const Chat: React.FC<ChatProps> = (props) => {
         ) : (
           <pre css={styles.chatContent}>{item.content}</pre>
         )}
-        {item.token && (
-          <div style={{ marginTop: "5px" }}>
-            <Tag size="sm">token: {item.token}</Tag>
-          </div>
+        {item.promptTokens && (
+          <Flex gap="3px" marginTop="2px">
+            <Tag size="sm">prompt tokens: {item.promptTokens}</Tag>
+            <Tag size="sm">completion tokens: {item.completionTokens}</Tag>
+          </Flex>
         )}
       </Box>
     </Container>
