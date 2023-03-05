@@ -15,7 +15,7 @@ export default async function handler(
   const result = await fetch(ENDPOINT, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.OPENAPI_APIKEY}`,
+      Authorization: `Bearer ${process.env.OPENAI_APIKEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
