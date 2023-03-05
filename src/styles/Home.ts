@@ -4,7 +4,7 @@ export const container = css`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100% - 4.5rem);
+  height: calc(100% - 3.5rem);
 `;
 
 export const buttons = css`
