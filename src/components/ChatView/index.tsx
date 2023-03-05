@@ -53,7 +53,7 @@ const Chat: React.FC<ChatProps> = (props) => {
           {item.role}
         </Box>
       </Box>
-      <Box p="2px 0 0" color={item.error ? "red" : undefined}>
+      <Box color={item.error ? "red" : undefined}>
         {item.error && item.role === "user" ? (
           <s>{item.content}</s>
         ) : (
